@@ -1,25 +1,64 @@
-Video 2 notes
-npx -> package manager
-npx create-react-app(utility) 01basicreact
+## 📹 Video 2 Notes
 
-How to understand react packages/projects->
--package.json(main entry point) under src
--consists of project name, dependencies, testing libraries, scripts.
--web-vitals condemns the performance of the app(record/tracking performance)
--scripts run the project or prepares the project for production
-under scripts: 
-start, build, test, eject
-start: runs the project in development environment
-build: final product of the app on browser(compiled version) 
-test: for running the test cases 
-eject: for ejecting react itself till a certain progression
+### 🚀 React Project Creation with `create-react-app`
 
-npm run start (for starting the project)
-npm run build(for building the project-> creates a build folder which contains static assests like html css and compiles the entire react code into js files)
+```bash
+npx create-react-app 01basicreact
 
-creating a project with vite
-->npm create vite@latest
-will ask the project name and what tech to build the project on
-->project folder will be ready
-->npm install to install the dependencies
-->npm run dev to run the project 
+npx: Node Package Runner — allows you to run packages without installing them globally.
+
+create-react-app: A utility to scaffold a new React project.
+
+01basicreact: The name of your React project.
+
+📁 Understanding React Project Structure
+🗂 package.json (Main Entry Point)
+Contains metadata about the project.
+
+Lists:
+
+📦 Project name
+
+🔗 Dependencies
+
+🧪 Testing libraries
+
+🛠 Scripts
+
+📈 web-vitals
+Used to measure and report app performance (Core Web Vitals like load time, responsiveness, etc.).
+
+📜 Scripts in package.json
+Script	Purpose
+start	Runs the project in development mode.
+build	Creates a production-ready build (compiled, optimized).
+test	Runs test cases.
+eject	Ejects from default CRA settings to gain full control of configurations.
+
+⚡ Creating a Project with Vite
+npm create vite@latest
+
+Prompts for:
+
+📛 Project name
+
+🧱 Framework and variant (e.g., React + JS/TS)
+
+Steps After Creation:
+Navigate into the project folder.
+
+Install dependencies:
+npm install
+
+Run the development server:
+npm run dev
+
+
+---
+
+#### 4. **Save the File**
+Use `Ctrl + S` or `Cmd + S`.
+
+#### 5. **Commit and Push to Git**
+
+```bash
