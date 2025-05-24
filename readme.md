@@ -56,9 +56,4 @@ npm run dev
 
 ---
 
-#### 4. **Save the File**
-Use `Ctrl + S` or `Cmd + S`.
 
-#### 5. **Commit and Push to Git**
-
-```bash
