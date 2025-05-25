@@ -1,4 +1,4 @@
-## 📹 Video 2 Notes
+## 📹 Notes for all the stuff I've learned about React JS
 
 ### 🚀 React Project Creation with `create-react-app`
 
