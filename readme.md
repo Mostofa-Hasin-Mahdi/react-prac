@@ -144,7 +144,7 @@ Wrap them in **fragments** to avoid extra divs:
 - 
 ---
 
-🔧 **React Hooks and State Management**
+###🔧 **React Hooks and State Management**
 
 🔄 **Why Use Hooks in React?**
 
@@ -186,8 +186,6 @@ let [counter, setCounter] = useState(15);
 ⚠️ **Note:** The change here refers to DOM updates — not just changing the value in memory, but also updating what is rendered on the screen.
 
 ---
-
-## 🌲 Virtual DOM, React Fiber, and Reconciliation
 
 ### 🌐 Virtual DOM & `createRoot`
 
