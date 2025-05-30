@@ -184,3 +184,61 @@ let [counter, setCounter] = useState(15);
 - Whenever setCounter() is called, the component re-renders with the new value.
 
 ⚠️ **Note:** The change here refers to DOM updates — not just changing the value in memory, but also updating what is rendered on the screen.
+
+---
+
+## 🌲 Virtual DOM, React Fiber, and Reconciliation
+
+### 🌐 Virtual DOM & `createRoot`
+
+In `main.jsx`, `createRoot` creates a virtual DOM (tree-like structure) and injects it into the real DOM.  
+It compares this virtual DOM with the actual DOM to detect and update **only the changed elements**.
+
+🌀 **Browser Repaint**  
+A full page reload causes the browser to **remove and repaint** the entire DOM — the loading icon appears during this.
+
+📦 With Virtual DOM, React:
+- Tracks the full structure in memory.
+- Updates only the changed parts for better performance.
+
+---
+
+### 🔥 React Fiber
+
+React Fiber enhances React by:
+
+- Enabling **incremental rendering**: work is split and spread over multiple frames.  
+- Supporting **animations, gestures, and layout** in a smoother way.
+
+🧪 **Hydration**  
+Sometimes, after a page updates, UI elements appear but don’t function immediately. This is called **hydration** — it means the **UI has rendered**, but **JavaScript is still loading**.
+
+---
+
+### ♻️ Reconciliation
+
+🧠 **What is it?**  
+A recursive algorithm React uses to figure out **what to update** in the DOM.
+
+📈 **How it Works:**  
+1. A tree of nodes representing the UI is created.  
+2. On `setState`, a new tree is generated.  
+3. React compares (diffs) the old tree with the new one.  
+4. Updates only the parts that changed.
+
+📌 **Important Concepts**:
+- If component **types differ**, React replaces the old tree entirely.  
+- Lists are diffed using **keys**. Keys must be:
+  - Stable  
+  - Predictable  
+  - Unique  
+
+⚖️ **Update Prioritization**  
+React categorizes updates by priority:
+
+- 🌀 Animations need to render quickly.  
+- 🗂 Data store updates can take longer.
+
+React’s **pull-based** scheduling lets it manage updates efficiently without relying on the developer.
+
+---
