@@ -141,3 +141,46 @@ Wrap them in **fragments** to avoid extra divs:
   ```
 - For **Vite**, use `.jsx` file extensions.  
 - Optionally, capitalize the filename (e.g., `Meatbox.jsx`).
+- 
+---
+
+🔧 **React Hooks and State Management**
+
+🔄 **Why Use Hooks in React?**
+
+In classic JavaScript, you could manipulate and show data directly using DOM methods like getElementById.
+In React, while you can still manipulate data, it won’t automatically reflect in the UI unless you use hooks.
+
+🧲 **What is a Hook?**
+
+Hooks are special functions in React that let you “hook into” React features like state and lifecycle methods.
+
+📦 **Importing Hooks**
+Use this import to bring in a hook:
+```jsx
+
+import { useState } from 'react';
+```
+🧠 **useState Hook**
+
+- Allows state management within function components.
+
+- Updates the state variable and reflects changes on the UI (DOM).
+
+- Syntax: 
+```jsx
+
+const [stateVariable, setStateFunction] = useState(defaultValue);
+```
+🔢 **Example:**
+```jsx
+
+let [counter, setCounter] = useState(15);
+```
+- counter → The state variable.
+
+- setCounter() → The function to update the variable.
+
+- Whenever setCounter() is called, the component re-renders with the new value.
+
+⚠️ **Note:** The change here refers to DOM updates — not just changing the value in memory, but also updating what is rendered on the screen.
