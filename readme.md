@@ -240,3 +240,32 @@ React categorizes updates by priority:
 React’s **pull-based** scheduling lets it manage updates efficiently without relying on the developer.
 
 ---
+
+### 📥 Receiving Values (Props)
+
+To receive values inside a component, declare `props` in the function:
+
+```jsx
+function Card(props) {
+  // component code
+}
+```
+**📤 Passing Props from a Parent Component**
+
+```jsx
+
+<Card username="eagle bruda" ver="69" />
+```
+**🧠 Destructuring Props in the Child Component**
+In Card.jsx, you can extract the values using object destructuring:
+
+```jsx
+
+function Card({ username, ver = "0.0" }) {
+  // component code
+}
+```
+- 📄 username → The username passed from the parent component.
+- 📄 ver = "0.0" → Default value. If the parent doesn't pass a ver prop, "0.0" will be used instead.
+
+---
